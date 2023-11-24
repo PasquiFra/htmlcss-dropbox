@@ -4,6 +4,8 @@
     --spacing-1_5: 1.5rem;
     --spacing-2: 2rem;
     --col-blue: #0161fe;
+    --txt-gray:#edecef;
+    --txt-dgray:#7a7a7c;
 }
 
 /* ------------ CSS RESET ------------*/
@@ -21,7 +23,7 @@
 }
 .container-small {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1000px;
     border: 1px solid black;
 }
 .flex {
@@ -71,7 +73,9 @@ ul {
     align-items: center;
 }
 .btn-large {
-    padding: 10px 14px;
+    text-align: center;
+    display: block;
+    padding: 10px 20px;
     background-color: var(--col-blue);
     color: #fff;
 }
@@ -167,7 +171,7 @@ h1 {
     height: 250px;
 } 
 .plan-card {
-    border: 3px solid #edecef;
+    border: 3px solid var(--txt-gray);
 }
 #plans h2 {
     display: block;
@@ -227,6 +231,7 @@ h1 {
 #plans li {
     margin-bottom: 25px;
 }
+
 #plans li.user-ico:before {
     content: "\f1ad";
     border: 1px solid black;
@@ -249,7 +254,9 @@ h1 {
     width: 75px;
     border: 1px solid #edecef;
 }
-
+.txt-dgray {
+    color: var(--txt-dgray);
+}
 
 
 #partners {
