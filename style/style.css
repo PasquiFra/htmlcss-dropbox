@@ -160,7 +160,7 @@ h1 {
     /*PLANS*/
 .plan-col {
     flex-basis: calc(100% / 3);
-    height: 750px;
+    height: 900px;
 }   
 .plan-col.large {
     flex-basis: 100%;
@@ -219,9 +219,38 @@ h1 {
 .cat-content * {
     margin: 15px 0;
 }
-#plans li:before {
-    content: "\f1ad";
+#plans ul{
+    margin-bottom: 50px;
+    padding-left: 1.5em;
+    text-indent: -1.2em;
 }
+#plans li {
+    margin-bottom: 25px;
+}
+#plans li.user-ico:before {
+    content: "\f1ad";
+    border: 1px solid black;
+}
+#plans li.folder-ico:before {
+    content: "\f07b";
+    border: 1px solid black;
+}
+#plans li.conn-ico:before {
+    content: "\f1e0";
+    border: 1px solid black;
+}
+#plans li.check-ico:before {
+    content: "\f00c";
+    border: 1px solid black;
+    color: var(--col-blue);
+}
+#small-brake {
+    margin: 35px 0 ;
+    width: 75px;
+    border: 1px solid #edecef;
+}
+
+
 
 #partners {
     height: 400px;
