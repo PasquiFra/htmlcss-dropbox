@@ -1,6 +1,9 @@
 /* ------------ CSS PROPERTIES ------------*/
 :root {
-
+    --spacing-1: 1rem;
+    --spacing-1_5: 1.5rem;
+    --spacing-2: 2rem;
+    --col-blue: #0161fe;
 }
 
 /* ------------ CSS RESET ------------*/
@@ -27,73 +30,152 @@
 .wrap {
     flex-wrap: wrap;
 }
-.card {
-    width: calc(100% / 3 - 20px);
-    height: 750px;
-    background-color: cadetblue;
-    border: dotted 1px aqua;
-}
 .box {
-    width: 250px;
+    flex-basis: 250px;
     height: 250px;
     border: 1px solid black;
 }
-.col {
-    width: calc(100% / 5);
+.col-5 {
+    flex-basis: calc(100% / 5);
     height: 250px;
     border: 1px solid black;
 }
-.large {
-    width: 100%;
+.col-3 {
+    flex-basis: calc(100% / 3);
+    border: 1px solid black;
+}
+.row.g-10 {
+    margin: 0 -10px;
+}
+.row.g-10 > .plan-col {
+	padding: 10px;
+}
+.col-30 {
+    flex-basis: 30%;
+
+}
+.col-70 {
+    flex-basis: 70%;
 }
 a {
     text-decoration: none;
     color: black;
 }
-
-/* NAVIGAZIONE */ 
-.nav-bar {
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    background-color: antiquewhite;
-    padding: 0 25px;
+.deco-link {
+    color: #3939f1;
+    text-decoration: underline;
 }
-.nav-left a,
-.nav-right a {
-    display: inline-block;
-    height: 50px;
-    width: 100px;
-    background-color: aquamarine;
+ul {
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+.btn-large {
+    padding: 10px 14px;
+    background-color: var(--col-blue);
+    color: #fff;
+}
+.btn-small {
+    padding: 8px 12px;
+    background-color: var(--col-blue);
+    color: #fff;
+}
+.center {
+    text-align: center;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 /* HEADER */ 
 header {
-    background-color: #b5d0e6;
-    height: calc(100vh - 200px);
+    justify-content: space-between;
+    padding: 25px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
 }
-#empty {
-    height: 100px;
-    background-color: rgb(245, 9, 9);
+.navbar-left,
+.navbar-right {
+    display: inline-block;
 }
 header .container-big {
     height: 100%;
     background-color: aquamarine;
     position: relative;
 }
-#go-main {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 75px;
-    width: 75px;
-    background-color: #b5d0e6;
-    border: 1px solid black;
-    scroll-behavior: smooth;
+
+/* MAIN */ 
+main section {
+    height: 1200px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    justify-content: space-between;
 }
 
-/*MAIN*/
+    /*JUMBOTRON*/
+#jumbotron .container-big{
+    flex-wrap: wrap;
+}
+#jumbotron {
+    height: 780px;
+    padding-top: 150px;
+    background-color: #b5d0e6;
+    margin-bottom: 175px;
+}
+.col-30 * {
+    display: inline-block;
+}
+.col-30 .btn-large {
+    margin: 25px 0;
+}
+.col-70 img {
+    width: 100%;
+}
+.col-70 img {
+    flex-basis: 70%;
+}
+#go-main {
+    margin-top: 60px;
+    height: 70px;
+    width: 70px;
+    background-color: #b5d0e6;
+    font-size: 1.5rem;
+    scroll-behavior: smooth;
+    line-height: 70px;
+    text-align:center;
+}
+h1 {
+    flex-basis: 100%;
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 60px;
+}
 
+    /*PLANS*/
+.plan-col {
+    flex-basis: calc(100% / 3);
+    height: 750px;
+}   
+.plan-col.large {
+    flex-basis: 100%;
+    height: 250px;
+} 
+.plan-card {
+    border: 3px solid #edecef;
+}
+#plans h2 {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+}
 #plans .card {
     background-color: cadetblue;
     border: dotted 1px aqua;
@@ -103,6 +185,44 @@ header .container-big {
     background-color: cadetblue;
     border: dotted 1px aqua;
 }
+.tick-box {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border:3px solid #dadbdc;
+    margin-right: 5px;
+}
+.invoicing p {
+    margin-right: 60px;
+    line-height: 20px;
+    text-align: center;
+}
+.invoicing {
+    padding: 40px 0;
+}
+.tick-box.checked {
+    border:5px solid var(--col-blue);
+}
+.fa-solid.fa-user {
+    color: black;
+    padding-right: 5px;
+}
+.category {
+    border-bottom: 3px solid #edecef;
+    padding: 10px 0;
+}
+.plan-card .cat-content {
+    padding: 25px;
+    text-align: start;
+}
+.cat-content * {
+    margin: 15px 0;
+}
+#plans li:before {
+    content: "\f1ad";
+}
+
 #partners {
     height: 400px;
 }
@@ -123,12 +243,7 @@ header .container-big {
     height: 350px;
     background-color:dodgerblue;
 }
-.invoicing, h2 {
-    display: block;
-    height: 30px;
-    width: 100%;
-    background-color: blueviolet;
-}
+
 .about-more {
     height: 100px;
     width: 100%;
@@ -141,10 +256,5 @@ header .container-big {
     width: 500px;
     height: 500px;
 }
-main section {
-    height: 1200px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    justify-content: space-between;
-}
+
 

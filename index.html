@@ -23,36 +23,93 @@
     </head>
 
 <body>
-    <!--BARRA DI NAVIGAZIONE-->
-    <nav class="nav-bar flex">
-        <div class="nav-left">
-            <a href="#"><!--<img src="./img/logo-small.png" alt="Logo" id="logo">--></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
-        <div class="nav-right">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
-    </nav>
     <!--HEADER-->
-    <header>
-        <div class="container-big">
-            <a id="go-main" href="#main"></a>
-        </div>
+    <header class="flex">
+        <nav class="navbar-left flex">
+            <ul class="flex">
+                <li><a href="#"><img src="./img/logo-small.png" alt="Logo" id="logo"></a></li>
+                <li><a href="#">Perchè Dropbox</a></li>
+                <li><a href="#">Funzioni</a></li>
+                <li><a href="#">Piani e Prezzi</a></li>
+            </ul>
+        </nav>
+        <nav class="navbar-right flex">
+            <ul class="flex">
+                <li><a href="#">Supporto</a></li>
+                <li><a href="#">Contatta l'ufficio vendite</a></li>
+                <li><a href="#">Accedi</a></li>
+                <li><a class="btn-small" href="#">Inizia</a></li>
+            </ul>
+        </nav>
     </header>
     <!--MAIN-->
-    <main id="main">
-        <section class="container-small flex wrap" id="plans">
-            <h2></h2>
-            <div class="invoicing"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card large"></div>
+    <main>
+        <section id="jumbotron">
+            <div class="container-big flex">
+                <h1>Tutto ciò che ti serve per il lavoro, in un unico posto</h1>
+                <div class="col-30">
+                    <p>Finalmente tutti i tuoi strumenti, contenuti e collaboratori sono accessibili dallo stesso posto. Dropbox Business è più di uno spazio di archiviazione sicuro: è un modo intelligente e integrato per ottimizzare il flusso di lavoro esistente.</p>
+                    <a class="btn-large" href="">Inizia la tua prova gratuita</a>
+                    <p>Annulla in qualiasi momento</p><br>
+                    <a id="go-main" href="#main"><i class="fa-solid fa-arrow-down fa-2xl"></i></a>
+                </div>
+                <div class="col-70">
+                    <img src="./img/jumbo.png" alt="dropbox-screen">
+                </div>
+            </div>
+        </section>
+        <section class="container-small" id="plans">
+            <h2>Trova il piano business che fa per te</h2>
+            <div class="invoicing flex">
+                <div class="tick-box checked"></div>
+                <p>Fatturazione mensile</p>
+                <div class="tick-box"></div>
+                <p>Fatturazione annuale</p>
+            </div>
+            <div class="row col-3 g-10">
+                <div class="plan-col center">
+                    <div class="plan-card">
+                        <div class="category"><i class="fa-solid fa-user"></i>Singolo
+                        </div>
+                        <div class="cat-content">
+                            <h3>Professional</h3>
+                            <div>€ 12.00</div>
+                            <div>/mese</div>
+                            <ul>
+                                <li class="cat-adv">
+                                    1 utente
+                                </li>
+                                <li class="cat-adv">
+                                    5 TB  di spazio di archiviazione sicuro
+                                </li>
+                                <li class="cat-adv">
+                                    Funzioni di produttività premium e condivisione file semplice e sicura
+                                </li>
+                            </ul>
+                            <a class="btn-large" href="#">Prova gratis per 30 giorni</a>
+                            <div>oppure <a class="deco-link" href="#">acquista ora</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-col center">
+                    <div class="plan-card">
+                        <div class="category"><i class="fa-solid fa-users"></i>Team
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-col center">
+                    <div class="plan-card">
+                        <div class="category"><i class="fa-solid fa-building"></i>Enterprise
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-col large center">
+                    <div class="plan-card">
+                        <div class="category"><i class="fa-solid fa-building"></i>Team
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="container-small" id="partners">
             
@@ -102,11 +159,11 @@
     </main>
     <footer>
         <div class="container-big flex wrap">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col-5"></div>
+            <div class="col-5"></div>
+            <div class="col-5"></div>
+            <div class="col-5"></div>
+            <div class="col-5"></div>
         </div>
         <div class="container-big">language</div>
     </footer>
