@@ -24,7 +24,7 @@
 .container-small {
     margin: 0 auto;
     max-width: 1000px;
-    border: 1px solid black;
+
 }
 .flex {
     display: flex;
@@ -44,7 +44,7 @@
 }
 .col-3 {
     flex-basis: calc(100% / 3);
-    border: 1px solid black;
+
 }
 .row.g-10 {
     margin: 0 -10px;
@@ -164,7 +164,7 @@ h1 {
     /*PLANS*/
 .plan-col {
     flex-basis: calc(100% / 3);
-    height: 900px;
+
 }   
 .plan-col.large {
     flex-basis: 100%;
@@ -172,6 +172,7 @@ h1 {
 } 
 .plan-card {
     border: 3px solid var(--txt-gray);
+    flex-grow: 1;
 }
 #plans h2 {
     display: block;
@@ -179,6 +180,12 @@ h1 {
     font-weight: bold;
     width: 100%;
     margin-bottom: 10px;
+}
+#plans h3 {
+    font-size: 1.5rem;
+}
+#plans h5 {
+    font-size: 1rem;
 }
 #plans .card {
     background-color: cadetblue;
@@ -215,6 +222,9 @@ h1 {
 .category {
     border-bottom: 3px solid #edecef;
     padding: 10px 0;
+}
+.category i {
+    padding-right: 5px;
 }
 .plan-card .cat-content {
     padding: 25px;
@@ -256,6 +266,26 @@ h1 {
 }
 .txt-dgray {
     color: var(--txt-dgray);
+}
+#team-enterprise {
+    position: relative;
+}
+#team-enterprise p,
+#team-enterprise h3
+{
+   padding: 25px;
+}   
+#team-enterprise .category {
+    text-align: center;
+}
+#team-enterprise .btn-large {
+    position: absolute;
+    top: 75px;
+    right: 25px;
+    width: 260px;
+}
+.price {
+    font-weight: bold;
 }
 
 
