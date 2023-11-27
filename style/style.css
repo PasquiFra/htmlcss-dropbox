@@ -44,7 +44,7 @@
 }
 .col-3 {
     flex-basis: calc(100% / 3);
-
+    flex-grow: 1;
 }
 .row.g-10 {
     margin: 0 -10px;
@@ -99,6 +99,17 @@ ul {
 	flex-wrap: wrap;
 	flex-direction: row;
 }
+img {
+    width: 100%;
+}
+h2 {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 
 /* HEADER */ 
 header {
@@ -174,7 +185,8 @@ h1 {
     /*PLANS*/
 .plan-col {
     flex-basis: calc(100% / 3);
-
+    flex-grow: 0;
+    flex-shrink: 0;
 }   
 .plan-col.large {
     flex-basis: 100%;
@@ -184,24 +196,8 @@ h1 {
     border: 3px solid var(--txt-gray);
     flex-grow: 1;
 }
-#plans h2 {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: bold;
-    width: 100%;
-    margin-bottom: 10px;
-}
 #plans h5 {
     font-size: 1rem;
-}
-#plans .card {
-    background-color: cadetblue;
-    border: dotted 1px aqua;
-}
-#functions .card {
-    height: 200px;
-    background-color: cadetblue;
-    border: dotted 1px aqua;
 }
 .tick-box {
     height: 20px;
@@ -285,8 +281,6 @@ h1 {
 #team-enterprise p {
     padding: 60px 0 25px 0;
 }
-
-
 #team-enterprise .category {
     text-align: center;
 }
@@ -301,9 +295,7 @@ h1 {
 }
 
     /*PARTNERS*/
-#partners {
-    height: 800;
-}
+
 .find-partner {
     border:3px solid #808180;
     color: #808180;
@@ -322,13 +314,24 @@ h1 {
     padding-bottom: 30px;
 }
 
-#functions {
-    height: 700px;
+/*FUNCTIONS*/
+#functions .card{
+    height: 600px;
+    text-align: start;
 }
+#functions img {
+    width: 100%;
+}
+#functions h3 {
+    padding-bottom: 25px;
+}
+
+/*AFFILIATES*/
 #affiliates {
     background-color: burlywood;
     height: 500px;
 }
+
 #free-trial {
     padding: 50px 0;
     height: 250px;
