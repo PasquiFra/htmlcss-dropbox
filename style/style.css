@@ -158,14 +158,21 @@ header {
     background-color: #fff;
     height: 75px;
     align-items: center;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 0px 0px 5px black;
+}
+#logo {
+    line-height: 100%;
+    text-align: center;
+    display: inline-block;
+    border: transparent;
 }
 header li {
     line-height: 75px;
     align-items: baseline;
+    border: 3px solid #ffffff00;
 }
 header li:hover {
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.5);
 }
 
 /* MAIN */ 
@@ -475,6 +482,9 @@ footer h3 {
 }
 footer li {
     margin: 10px 0;
+}
+footer li:hover {
+    text-decoration: underline;
 }
 .footer-bottom * {
     display: inline-block;
