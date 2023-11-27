@@ -370,7 +370,7 @@ h1 {
     width: 50%;
     height: 50%;
     position: relative;
-    border: 15px solid #7a7a7a00;
+    border: 15px solid #ffffff00;
 }
 .img-box {
     position: absolute;
@@ -400,7 +400,7 @@ h1 {
     padding-bottom: 30px;
 }
 #main-box:hover, .box:hover {
-    border: 15px solid #96909050;
+    border: 15px solid #ffffff50;
 }
 #free-trial {
     width: 100vw;
@@ -410,7 +410,6 @@ h1 {
 }
 #free-trial .container-small {
     justify-content: space-between;
-
 }
 #free-trial h2 {
     width: 60%;
@@ -421,12 +420,36 @@ h1 {
     padding: 10px 20px;
     background-color: #f4f5f4;
 }
-
-#FAQ {
-    padding: 50px 0;
-    height: 700px;
+#faq ul{
+    margin-top: 35px;
+    border-top: 3px solid #bebcc2;
+    border-bottom: 3px solid #bebcc2;
 }
-
+#faq li{
+    padding: 30px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+#faq p {
+    flex-basis: 100%;
+    padding-top: 25px;
+    display: none;
+}
+#faq li:hover p{
+    display: inline-block;
+}
+#faq h5{
+    font-weight: bold;
+    display: inline-block;
+}
+.bd-bottom {
+    border-bottom: 1px solid black;
+}
+.fa-angle-down {
+    padding-right: 25px;
+    display: inline;
+    font-size: 0.8rem;
+}
 .about-more {
     height: 100px;
     width: 100%;
