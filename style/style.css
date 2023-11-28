@@ -1,4 +1,4 @@
-/* ------------ CSS PROPERTIES ------------*/
+/*! ------------ CSS PROPERTIES ------------*/
 :root {
     --spacing-1: 1rem;
     --spacing-1_5: 1.5rem;
@@ -6,9 +6,10 @@
     --col-blue: #0161fe;
     --txt-gray:#edecef;
     --txt-dgray:#7a7a7c;   
+    --fa-font-solid;
 }
 
-/* ------------ CSS RESET ------------*/
+/*! ------------ CSS RESET ------------*/
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +17,35 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-/* ------------ UTILITIES ------------ */
+/*! ------------ Font-Awesome settings ---------- */
+li[class*="-ico"]::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+}
+li.user-ico:before {
+    content: "\f1ad";
+}
+li.folder-ico:before {
+    content: "\f07b";
+}
+li.conn-ico:before {
+    content: "\f1e0";
+}
+li.check-ico:before {
+    content: "\f00c";
+    color: var(--col-blue);
+}
+.fa-solid.fa-user {
+    color: black;
+    padding-right: 5px;
+}
+
+/*! ------------ UTILITIES ------------ */
+
+/*! Container rules */
+
 .container-big {
     margin: 0 auto;
     max-width: 1200px;
@@ -25,12 +54,9 @@
     margin: 0 auto;
     max-width: 1000px;
 }
-.flex {
-    display: flex;
-}
-.wrap {
-    flex-wrap: wrap;
-}
+
+/*! Flex rules */ 
+
 .col-5 {
     flex-basis: calc(100% / 5);
     height: 250px;
@@ -44,15 +70,13 @@
     margin: 0 -10px;
 }
 .row.g-10 > .plan-col {
-	padding: 10px;
+    padding: 10px;
 }
 .col-30 {
     flex-basis: 30%;
-
 }
 .col-40 {
     flex-basis: 40%;
-
 }
 .col-60 {
     flex-basis: 60%;
@@ -60,6 +84,20 @@
 .col-70 {
     flex-basis: 70%;
 }
+.flex {
+    display: flex;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+/*! Buttons and Links */
+
 a {
     text-decoration: none;
     color: black;
@@ -67,11 +105,6 @@ a {
 .deco-link {
     color: #3939f1;
     text-decoration: underline;
-}
-ul {
-    list-style: none;
-    gap: 30px;
-    align-items: center;
 }
 .btn-large {
     text-align: center;
@@ -88,13 +121,16 @@ ul {
 .btn-small:hover, .btn-large:hover {
     background-color:  #0162fe85;
 }
+
+/*! Others */
+
 .center {
     text-align: center;
 }
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
+ul {
+    list-style: none;
+    gap: 30px;
+    align-items: center;
 }
 img {
     width: 100%;
@@ -116,6 +152,9 @@ h2 {
     width: 90px;
     border: 1px solid #bebcc2;
 }
+
+/*!Backgrounds*/
+
 .bg-lgreen {
     background-color: #a2d39b;
 }
@@ -146,7 +185,9 @@ h2 {
 .txt-white {
     color: #fff;
 }
-/* HEADER */ 
+
+/*! HEADER */ 
+
 header {
     justify-content: space-between;
     padding: 0 25px;
@@ -175,7 +216,8 @@ header li:hover {
     border-bottom: 3px solid rgba(0, 0, 0, 0.5);
 }
 
-/* MAIN */ 
+/*! MAIN */ 
+
 main section {
     padding-bottom: 150px;
     flex-shrink: 0;
@@ -185,7 +227,8 @@ section h3 {
     font-size: 1.5rem;
 }
 
-    /*JUMBOTRON*/
+/*!JUMBOTRON*/
+
 #jumbotron .container-big{
     flex-wrap: wrap;
 }
@@ -226,7 +269,8 @@ h1 {
     margin-bottom: 60px;
 }
 
-    /*PLANS*/
+/*!PLANS*/
+
 .plan-col {
     flex-basis: calc(100% / 3);
     flex-grow: 0;
@@ -262,10 +306,6 @@ h1 {
 .tick-box.checked {
     border:5px solid var(--col-blue);
 }
-.fa-solid.fa-user {
-    color: black;
-    padding-right: 5px;
-}
 .category {
     border-bottom: 3px solid #edecef;
     padding: 10px 0;
@@ -282,28 +322,11 @@ h1 {
 }
 #plans ul{
     margin-bottom: 50px;
-    padding-left: 1.5em;
+    padding-left: 2.5em;
     text-indent: -1.2em;
 }
 #plans li {
     margin-bottom: 25px;
-}
-#plans li.user-ico:before {
-    content: "\f1ad";
-    border: 1px solid black;
-}
-#plans li.folder-ico:before {
-    content: "\f07b";
-    border: 1px solid black;
-}
-#plans li.conn-ico:before {
-    content: "\f1e0";
-    border: 1px solid black;
-}
-#plans li.check-ico:before {
-    content: "\f00c";
-    border: 1px solid black;
-    color: var(--col-blue);
 }
 .txt-dgray {
     color: var(--txt-dgray);
@@ -333,7 +356,7 @@ h1 {
     font-weight: bold;
 }
 
-    /*PARTNERS*/
+/*!PARTNERS*/
 
 .find-partner {
     border:3px solid #808180;
@@ -356,7 +379,8 @@ h1 {
     padding-bottom: 30px;
 }
 
-/*FUNCTIONS*/
+/*!FUNCTIONS*/
+
 #functions .card{
     height: 600px;
     text-align: start;
@@ -368,7 +392,8 @@ h1 {
     padding-bottom: 25px;
 }
 
-/*AFFILIATES*/
+/*!AFFILIATES*/
+
 #affiliates-title h2 {
     margin-bottom: 75px;
 }
@@ -472,6 +497,9 @@ h1 {
     display: inline;
     font-size: 0.8rem;
 }
+
+/*! FOOTER */ 
+
 footer {
     background-color: black;
     color: #fff;
